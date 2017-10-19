@@ -1,0 +1,407 @@
+extends templates/layout
+block vars
+	- var title = ''
+	- var og_title = ''
+	- var og_description = ''
+	- var og_image = ''
+	- var twitter_description = ''
+
+block content
+	.container-block
+		.sidebar
+			.sidebar__logo 
+			.sidebar__menu
+				nav.sidebar__tab
+					ul.sidebar__list.tabNavList
+							li.sidebar__item.active Первая ссылка
+							li.sidebar__item Вторая ссылка
+							li.sidebar__item Третья ссылка
+							li.sidebar__item Личный кабинет
+							li.sidebar__item Выйти
+		.sidebar.sidebar--mobile
+			.sidebar__header
+				.sidebar__logo 
+				.sidebar__button-menu
+			.sidebar__menu
+				nav.sidebar__tab
+					ul.sidebar__list.tabNavList
+							li.sidebar__item.active Первая ссылка
+							li.sidebar__item Вторая ссылка
+							li.sidebar__item Третья ссылка
+							li.sidebar__item Личный кабинет
+							li.sidebar__item Выйти
+		.main-content 
+			.main-content__pages-list
+				.main-content__page.active
+					.main-content__header
+						h1 Заголовок страницы
+						p В отличие от пылевого и ионного хвостов, направление поступает в лимногляциальный часовой угол
+					.main-content__article.article
+						.article__form-header
+							.article__line-info
+								span Информация по оплате:
+							.article__line-info
+								span Номер счета:
+								span.article__value.value--one 87123658716587
+							.article__line-info
+								span Сумма платежа:
+								span.article__value.value--two 100 руб.
+						.article__form.form
+							h2 Данные банковской карты
+							.form__wrapper
+								form(name='form__credit-card')
+									.form__card--one
+										label(for='input1', class="label--one") Номер карты
+										.form__wrapper-input-card
+											input#input1(type='text', maxlength='4', size='4', required)
+											input#input2(type='text', maxlength='4', size='4', required)
+											input#input3(type='text', maxlength='4', size='4', required)
+											input#input4(type='text', maxlength='4', size='4', required)
+										label(class="label--two") Срок действия
+										.form__wrapper-input-date
+											select(required, value='').form__input-month#month
+												option(value='00') 00
+												option(value='01') 01
+												option(value='02') 02
+												option(value='03') 03
+												option(value='04') 04
+												option(value='05') 05
+												option(value='06') 06
+												option(value='07') 07
+												option(value='08') 08
+												option(value='09') 09
+												option(value='10') 10
+												option(value='11') 11
+												option(value='12') 12
+											select(required, value='').form__input-years#years
+												option(value='0000') 0000
+												option(value='2010') 2010
+												option(value='2011') 2011
+												option(value='2012') 2012
+												option(value='2013') 2013
+												option(value='2014') 2014
+												option(value='2015') 2015
+												option(value='2016') 2016
+												option(value='2017') 2017
+												option(value='2018') 2018
+												option(value='2019') 2019
+												option(value='2020') 2020
+												option(value='2021') 2021
+												option(value='2022') 2022
+												option(value='2023') 2023
+												option(value='2024') 2024
+												option(value='2025') 2025
+										.form__wrapper-input-text
+											input#username(type='text', name='username', placeholder="Держатель карты")
+									.form__card--two
+										.form__line
+										.form__wrapper-code
+											label(for="usercode", class="label--three") Код CVV2 / CVC2
+											input#usercode(type='text', maxlength='3', size='3', required)
+											a.form__link--placeholder(href="")
+									.form__wrapper-submit
+										input(type='submit', value='Оплатить')
+					.main-content__footer.footer 
+						.footer__text Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.<br><br>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.<br><br>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.<br><br>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+				.main-content__page
+					.main-content__header
+						h1 Заголовок второй страницы
+						p В отличие от пылевого и ионного хвостов, направление поступает в лимногляциальный часовой угол
+					.main-content__article.article
+						.article__form-header
+							.article__line-info
+								span Информация по оплате:
+							.article__line-info
+								span Номер счета:
+								span.article__value.value--one 87123658716587
+							.article__line-info
+								span Сумма платежа:
+								span.article__value.value--two 100 руб.
+						.article__form.form
+							h2 Данные банковской карты
+							.form__wrapper
+								form(action='#', name='form__credit-card')
+									.form__card--one
+										label(for='input1', class="label--one") Номер карты
+										.form__wrapper-input-card
+											input#input1(type='text', maxlength='4', size='4', required)
+											input#input2(type='text', maxlength='4', size='4', required)
+											input#input3(type='text', maxlength='4', size='4', required)
+											input#input4(type='text', maxlength='4', size='4', required)
+										label(class="label--two") Срок действия
+										.form__wrapper-input-date
+											select(required, value='').form__input-month#month
+												option(value='') 
+												option(value='01') 01
+												option(value='02') 02
+												option(value='03') 03
+												option(value='04') 04
+												option(value='05') 05
+												option(value='06') 06
+												option(value='07') 07
+												option(value='08') 08
+												option(value='09') 09
+												option(value='10') 10
+												option(value='11') 11
+												option(value='12') 12
+											select(required, value='').form__input-years#years
+												option(value='') 
+												option(value='2010') 2010
+												option(value='2011') 2011
+												option(value='2012') 2012
+												option(value='2013') 2013
+												option(value='2014') 2014
+												option(value='2015') 2015
+												option(value='2016') 2016
+												option(value='2017') 2017
+												option(value='2018') 2018
+												option(value='2019') 2019
+												option(value='2020') 2020
+												option(value='2021') 2021
+												option(value='2022') 2022
+												option(value='2023') 2023
+												option(value='2024') 2024
+												option(value='2025') 2025
+										.form__wrapper-input-text
+											input#username(type='text', name='username', placeholder="Держатель карты")
+									.form__card--two
+										.form__line
+										.form__wrapper-code
+											label(for="usercode", class="label--three") Код CVV2 / CVC2
+											input#usercode(type='text', maxlength='3', size='3')
+											a.form__link--placeholder(href="")
+									.form__wrapper-submitm
+										input(type='submit', value='Оплатить')
+					.main-content__footer.footer 
+						.footer__text Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.<br><br>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.<br><br>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.<br><br>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+				.main-content__page
+					.main-content__header
+						h1 Заголовок третей страницы
+						p В отличие от пылевого и ионного хвостов, направление поступает в лимногляциальный часовой угол
+					.main-content__article.article
+						.article__form-header
+							.article__line-info
+								span Информация по оплате:
+							.article__line-info
+								span Номер счета:
+								span.article__value.value--one 87123658716587
+							.article__line-info
+								span Сумма платежа:
+								span.article__value.value--two 100 руб.
+						.article__form.form
+							h2 Данные банковской карты
+							.form__wrapper
+								form(action='#', name='form__credit-card')
+									.form__card--one
+										label(for='input1', class="label--one") Номер карты
+										.form__wrapper-input-card
+											input#input1(type='text', maxlength='4', size='4', required)
+											input#input2(type='text', maxlength='4', size='4', required)
+											input#input3(type='text', maxlength='4', size='4', required)
+											input#input4(type='text', maxlength='4', size='4', required)
+										label(class="label--two") Срок действия
+										.form__wrapper-input-date
+											select(required, value='').form__input-month#month
+												option(value='') 
+												option(value='01') 01
+												option(value='02') 02
+												option(value='03') 03
+												option(value='04') 04
+												option(value='05') 05
+												option(value='06') 06
+												option(value='07') 07
+												option(value='08') 08
+												option(value='09') 09
+												option(value='10') 10
+												option(value='11') 11
+												option(value='12') 12
+											select(required, value='').form__input-years#years
+												option(value='') 
+												option(value='2010') 2010
+												option(value='2011') 2011
+												option(value='2012') 2012
+												option(value='2013') 2013
+												option(value='2014') 2014
+												option(value='2015') 2015
+												option(value='2016') 2016
+												option(value='2017') 2017
+												option(value='2018') 2018
+												option(value='2019') 2019
+												option(value='2020') 2020
+												option(value='2021') 2021
+												option(value='2022') 2022
+												option(value='2023') 2023
+												option(value='2024') 2024
+												option(value='2025') 2025
+										.form__wrapper-input-text
+											input#username(type='text', name='username', placeholder="Держатель карты")
+									.form__card--two
+										.form__line
+										.form__wrapper-code
+											label(for="usercode", class="label--three") Код CVV2 / CVC2
+											input#usercode(type='text', maxlength='3', size='3')
+											a.form__link--placeholder(href="")
+									.form__wrapper-submitm
+										input(type='submit', value='Оплатить')
+					.main-content__footer.footer 
+						.footer__text Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.<br><br>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.<br><br>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.<br><br>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+				.main-content__page
+					.main-content__header
+						h1 Заголовок четвертой страницы
+						p В отличие от пылевого и ионного хвостов, направление поступает в лимногляциальный часовой угол
+					.main-content__article.article
+						.article__form-header
+							.article__line-info
+								span Информация по оплате:
+							.article__line-info
+								span Номер счета:
+								span.article__value.value--one 87123658716587
+							.article__line-info
+								span Сумма платежа:
+								span.article__value.value--two 100 руб.
+						.article__form.form
+							h2 Данные банковской карты
+							.form__wrapper
+								form(action='#', name='form__credit-card')
+									.form__card--one
+										label(for='input1', class="label--one") Номер карты
+										.form__wrapper-input-card
+											input#input1(type='text', maxlength='4', size='4', required)
+											input#input2(type='text', maxlength='4', size='4', required)
+											input#input3(type='text', maxlength='4', size='4', required)
+											input#input4(type='text', maxlength='4', size='4', required)
+										label(class="label--two") Срок действия
+										.form__wrapper-input-date
+											select(required, value='').form__input-month#month
+												option(value='') 
+												option(value='01') 01
+												option(value='02') 02
+												option(value='03') 03
+												option(value='04') 04
+												option(value='05') 05
+												option(value='06') 06
+												option(value='07') 07
+												option(value='08') 08
+												option(value='09') 09
+												option(value='10') 10
+												option(value='11') 11
+												option(value='12') 12
+											select(required, value='').form__input-years#years
+												option(value='') 
+												option(value='2010') 2010
+												option(value='2011') 2011
+												option(value='2012') 2012
+												option(value='2013') 2013
+												option(value='2014') 2014
+												option(value='2015') 2015
+												option(value='2016') 2016
+												option(value='2017') 2017
+												option(value='2018') 2018
+												option(value='2019') 2019
+												option(value='2020') 2020
+												option(value='2021') 2021
+												option(value='2022') 2022
+												option(value='2023') 2023
+												option(value='2024') 2024
+												option(value='2025') 2025
+										.form__wrapper-input-text
+											input#username(type='text', name='username', placeholder="Держатель карты")
+									.form__card--two
+										.form__line
+										.form__wrapper-code
+											label(for="usercode", class="label--three") Код CVV2 / CVC2
+											input#usercode(type='text', maxlength='3', size='3')
+											a.form__link--placeholder(href="")
+									.form__wrapper-submitm
+										input(type='submit', value='Оплатить')
+					.main-content__footer.footer 
+						.footer__text Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.<br><br>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.<br><br>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.<br><br>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+				.main-content__page
+					.main-content__header
+						h1 Заголовок пятой страницы
+						p В отличие от пылевого и ионного хвостов, направление поступает в лимногляциальный часовой угол
+					.main-content__article.article
+						.article__form-header
+							.article__line-info
+								span Информация по оплате:
+							.article__line-info
+								span Номер счета:
+								span.article__value.value--one 87123658716587
+							.article__line-info
+								span Сумма платежа:
+								span.article__value.value--two 100 руб.
+						.article__form.form
+							h2 Данные банковской карты
+							.form__wrapper
+								form(action='#', name='form__credit-card')
+									.form__card--one
+										label(for='input1', class="label--one") Номер карты
+										.form__wrapper-input-card
+											input#input1(type='text', maxlength='4', size='4', required)
+											input#input2(type='text', maxlength='4', size='4', required)
+											input#input3(type='text', maxlength='4', size='4', required)
+											input#input4(type='text', maxlength='4', size='4', required)
+										label(class="label--two") Срок действия
+										.form__wrapper-input-date
+											select(required, value='').form__input-month#month
+												option(value='') 
+												option(value='01') 01
+												option(value='02') 02
+												option(value='03') 03
+												option(value='04') 04
+												option(value='05') 05
+												option(value='06') 06
+												option(value='07') 07
+												option(value='08') 08
+												option(value='09') 09
+												option(value='10') 10
+												option(value='11') 11
+												option(value='12') 12
+											select(required, value='').form__input-years#years
+												option(value='') 
+												option(value='2010') 2010
+												option(value='2011') 2011
+												option(value='2012') 2012
+												option(value='2013') 2013
+												option(value='2014') 2014
+												option(value='2015') 2015
+												option(value='2016') 2016
+												option(value='2017') 2017
+												option(value='2018') 2018
+												option(value='2019') 2019
+												option(value='2020') 2020
+												option(value='2021') 2021
+												option(value='2022') 2022
+												option(value='2023') 2023
+												option(value='2024') 2024
+												option(value='2025') 2025
+										.form__wrapper-input-text
+											input#username(type='text', name='username', placeholder="Держатель карты")
+									.form__card--two
+										.form__line
+										.form__wrapper-code
+											label(for="usercode", class="label--three") Код CVV2 / CVC2
+											input#usercode(type='text', maxlength='3', size='3')
+											a.form__link--placeholder(href="")
+									.form__wrapper-submitm
+										input(type='submit', value='Оплатить')
+					.main-content__footer.footer 
+						.footer__text Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.<br><br>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.<br><br>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.<br><br>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+					
+			
+						
+
+			
+	
+		
+	
+
+		
+	
+		
+
+				
+			
+					
+					
+	
